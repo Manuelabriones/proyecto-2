@@ -1,25 +1,31 @@
-let boton = document.getElementById("agregar");
-let listaComentarios = document.getElementById("listaComentarios");
+const password = document.getElementById("password");
+const boton = document.getElementById("generar");
 
-boton.addEventListener("click", function() {
+boton.addEventListener("click", function(){
 
-    let texto = document.getElementById("comentario").value;
+    let caracteres = "abcdefghijklmnopqrstuvwxyz";
 
-    if (texto.trim() !== "") {
-
-        let nuevoComentario = document.createElement("div");
-        nuevoComentario.classList.add("comentario");
-
-        let fecha = new Date();
-
-        nuevoComentario.innerHTML = `
-            <p>${texto}</p>
-            <small>${fecha.toLocaleString()}</small>
-        `;
-
-        listaComentarios.appendChild(nuevoComentario);
-
-        document.getElementById("comentario").value = "";
+    if(document.getElementById("mayusculas").checked){
+        caracteres += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     }
+
+    if(document.getElementById("numeros").checked){
+        caracteres += "0123456789";
+    }
+
+    if(document.getElementById("simbolos").checked){
+        caracteres += "!@#$%^&*()_+";
+    }
+
+    let nuevaPassword = "";
+
+    for(let i = 0; i < 12; i++){
+
+        let random = Math.floor(Math.random() * caracteres.length);
+
+        nuevaPassword += caracteres[random];
+    }
+
+    password.value = nuevaPassword;
 
 });
