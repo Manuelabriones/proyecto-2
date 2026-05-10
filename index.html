@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Proyecto 2 - JavaScript</title>
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      background: #f4f4f4;
-      margin-top: 50px;
-    }
-    h1 {
-      color: #333;
-    }
-    p {
-      font-size: 18px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de Comentarios</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>Proyecto 2 </h1>
-  <p>Tipos de datos en JavaScript</p>
+    <div class="container">
+        <h1>Caja de Comentarios</h1>
 
+        <textarea id="comentario" placeholder="Escribe un comentario"></textarea>
+
+        <button id="agregar">Agregar Comentario</button>
+
+        <div id="listaComentarios"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
