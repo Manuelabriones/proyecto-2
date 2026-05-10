@@ -1,31 +1,37 @@
-const password = document.getElementById("password");
-const boton = document.getElementById("generar");
+let boton = document.getElementById("agregar");
+let listaComentarios = document.getElementById("listaComentarios");
 
-boton.addEventListener("click", function(){
+boton.addEventListener("click", function() {
 
-    let caracteres = "abcdefghijklmnopqrstuvwxyz";
+    let texto = document.getElementById("comentario").value;
 
-    if(document.getElementById("mayusculas").checked){
-        caracteres += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    if (texto.trim() !== "") {
+
+        let nuevoComentario = document.createElement("div");
+
+        nuevoComentario.classList.add("comentario");
+
+        let fecha = new Date();
+
+        nuevoComentario.innerHTML = `
+            <p>${texto}</p>
+            <small class="fecha">${fecha.toLocaleString()}</small>
+            <br>
+            <button class="eliminar">Eliminar</button>
+        `;
+
+        listaComentarios.appendChild(nuevoComentario);
+
+        document.getElementById("comentario").value = "";
+
+        let botonEliminar = nuevoComentario.querySelector(".eliminar");
+
+        botonEliminar.addEventListener("click", function() {
+
+            nuevoComentario.remove();
+
+        });
+
     }
-
-    if(document.getElementById("numeros").checked){
-        caracteres += "0123456789";
-    }
-
-    if(document.getElementById("simbolos").checked){
-        caracteres += "!@#$%^&*()_+";
-    }
-
-    let nuevaPassword = "";
-
-    for(let i = 0; i < 12; i++){
-
-        let random = Math.floor(Math.random() * caracteres.length);
-
-        nuevaPassword += caracteres[random];
-    }
-
-    password.value = nuevaPassword;
 
 });

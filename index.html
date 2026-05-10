@@ -3,37 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Passwords</title>
+    <title>Caja de Comentarios</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
 
-        <h1>Generador de Passwords</h1>
+        <h1>Caja de Comentarios</h1>
 
-        <input type="text" id="password" readonly placeholder="Tu contraseña aparecerá aquí">
+        <textarea id="comentario" placeholder="Escribe un comentario"></textarea>
 
-        <div class="options">
+        <button id="agregar">Agregar Comentario</button>
 
-            <label>
-                <input type="checkbox" id="mayusculas" checked>
-                Incluir mayúsculas
-            </label>
-
-            <label>
-                <input type="checkbox" id="numeros" checked>
-                Incluir números
-            </label>
-
-            <label>
-                <input type="checkbox" id="simbolos" checked>
-                Incluir símbolos
-            </label>
-
-        </div>
-
-        <button id="generar">Generar Password</button>
+        <div id="listaComentarios"></div>
 
     </div>
 
