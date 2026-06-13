@@ -2,23 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caja de Comentarios</title>
+    <title>Generador de Contraseñas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
+    <h1>Generador de Contraseñas</h1>
 
-        <h1>Caja de Comentarios</h1>
+    <input type="text" id="password" readonly>
 
-        <textarea id="comentario" placeholder="Escribe un comentario"></textarea>
-
-        <button id="agregar">Agregar Comentario</button>
-
-        <div id="listaComentarios"></div>
-
-    </div>
+    <button onclick="generarPassword()">
+        Generar Contraseña
+    </button>
 
     <script src="script.js"></script>
 

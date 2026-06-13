@@ -1,37 +1,13 @@
-let boton = document.getElementById("agregar");
-let listaComentarios = document.getElementById("listaComentarios");
+function generarPassword() {
+    const caracteres =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*";
 
-boton.addEventListener("click", function() {
+    let password = "";
 
-    let texto = document.getElementById("comentario").value;
-
-    if (texto.trim() !== "") {
-
-        let nuevoComentario = document.createElement("div");
-
-        nuevoComentario.classList.add("comentario");
-
-        let fecha = new Date();
-
-        nuevoComentario.innerHTML = `
-            <p>${texto}</p>
-            <small class="fecha">${fecha.toLocaleString()}</small>
-            <br>
-            <button class="eliminar">Eliminar</button>
-        `;
-
-        listaComentarios.appendChild(nuevoComentario);
-
-        document.getElementById("comentario").value = "";
-
-        let botonEliminar = nuevoComentario.querySelector(".eliminar");
-
-        botonEliminar.addEventListener("click", function() {
-
-            nuevoComentario.remove();
-
-        });
-
+    for (let i = 0; i < 12; i++) {
+        const indice = Math.floor(Math.random() * caracteres.length);
+        password += caracteres[indice];
     }
 
-});
+    document.getElementById("password").value = password;
+}
