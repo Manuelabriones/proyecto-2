@@ -1,0 +1,28 @@
+{
+    "libros": [
+        {
+            "titulo": "Cien años de soledad",
+            "autor": "Gabriel García Márquez",
+            "genero": "Realismo mágico",
+            "disponible": true
+        },
+        {
+            "titulo": "El principito",
+            "autor": "Antoine de Saint-Exupéry",
+            "genero": "Fantasía",
+            "disponible": false
+        },
+        {
+            "titulo": "Don Quijote de la Mancha",
+            "autor": "Miguel de Cervantes",
+            "genero": "Novela",
+            "disponible": false
+        },
+        {
+            "titulo": "Harry Potter y la piedra filosofal",
+            "autor": "J.K. Rowling",
+            "genero": "Fantasía",
+            "disponible": true
+        }
+    ]
+}
