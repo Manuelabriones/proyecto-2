@@ -1,0 +1,17 @@
+{
+  "name": "p7-node-npm",
+  "version": "1.0.0",
+  "description": "Proyecto de introducción a Node.js y npm con una lista de planetas favoritos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "planetas": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "npm",
+    "javascript"
+  ],
+  "author": "Manuela Briones",
+  "license": "ISC"
+}
