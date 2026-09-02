@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #080b1a;
+  color: white;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 35px;
+  background: #11162a;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #aeb6d5;
+  margin-bottom: 30px;
+}
+
+.estado {
+  padding: 18px;
+  text-align: center;
+  background: #1b2240;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.estado h2 {
+  margin: 0;
+}
+
+.datos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.tarjeta {
+  background: #1b2240;
+  padding: 22px 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.tarjeta span {
+  display: block;
+  color: #abb5d9;
+  margin-bottom: 10px;
+}
+
+.tarjeta strong {
+  display: block;
+  font-size: 26px;
+}
+
+.barra-container {
+  background: #1b2240;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.barra-container p {
+  margin-top: 0;
+}
+
+.barra {
+  width: 100%;
+  height: 20px;
+  border-radius: 20px;
+  background: #343b56;
+  overflow: hidden;
+}
+
+.nivel {
+  height: 100%;
+  background: #53d769;
+  transition: width 0.5s;
+}
+
+.botones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #5865f2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+.reiniciar {
+  background: #30384f;
+}
+
+.planetas {
+  border-top: 1px solid #333b5d;
+  padding-top: 20px;
+}
+
+.planetas h2 {
+  margin-top: 0;
+}
+
+.lista-planetas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.planeta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1b2240;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.planeta span {
+  font-size: 35px;
+}
+
+.planeta h3 {
+  margin: 0 0 5px;
+}
+
+.planeta p {
+  margin: 0;
+  color: #abb5d9;
+}
+
+.vacio {
+  color: #abb5d9;
+}
+
+@media (max-width: 650px) {
+  .datos {
+    grid-template-columns: 1fr;
+  }
+
+  .botones {
+    grid-template-columns: 1fr;
+  }
+
+  .lista-planetas {
+    grid-template-columns: 1fr;
+  }
+}
