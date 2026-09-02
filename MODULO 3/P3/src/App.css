@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.reloj {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.reloj p {
+  margin: 0;
+  color: #777;
+}
+
+.reloj h2 {
+  margin: 8px 0 0;
+  font-size: 30px;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr 120px auto;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #555;
+}
+
+button {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 7px;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.resumen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.resumen-item {
+  background-color: #f7f7f7;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.resumen-item span {
+  display: block;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.resumen-item strong {
+  font-size: 25px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #f7f7f7;
+  padding: 15px;
+  border-radius: 9px;
+}
+
+.tarea-info h3 {
+  margin: 0 0 7px;
+}
+
+.tarea-info p {
+  margin: 0;
+  color: #555;
+}
+
+.eliminar {
+  background-color: #b23a3a;
+}
+
+.eliminar:hover {
+  background-color: #8f2e2e;
+}
+
+.limpiar {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.vacia {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+@media (max-width: 650px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+
+  .resumen {
+    grid-template-columns: 1fr;
+  }
+
+  .tarea {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .eliminar {
+    width: 100%;
+  }
+}
