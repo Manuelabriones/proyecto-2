@@ -1,0 +1,228 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f3f6f9;
+  color: #263238;
+}
+
+#root {
+  width: 100%;
+}
+
+.navbar {
+  background-color: white;
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar h2 {
+  margin: 0;
+  color: #1976d2;
+}
+
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:hover {
+  color: #1976d2;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  margin: 40px auto;
+}
+
+.pagina h1 {
+  text-align: center;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.hero {
+  text-align: center;
+  background-color: white;
+  padding: 50px 30px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.icono {
+  font-size: 55px;
+}
+
+.hero h1 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.boton {
+  display: inline-block;
+  background-color: #1976d2;
+  color: white;
+  padding: 13px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.boton:hover {
+  background-color: #125ba5;
+}
+
+.beneficios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card span {
+  font-size: 35px;
+}
+
+.card p {
+  color: #666;
+}
+
+.lista-citas {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cita-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.cita-card h2 {
+  margin: 10px 0;
+}
+
+.cita-card p {
+  margin: 7px 0;
+  color: #555;
+}
+
+.numero {
+  display: inline-block;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.detalle-card {
+  max-width: 650px;
+  margin: 30px auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.detalle-fila {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detalle-fila:last-child {
+  border-bottom: none;
+}
+
+.detalle-fila span {
+  color: #666;
+}
+
+.volver {
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+.not-found {
+  text-align: center;
+  background-color: white;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.error-numero {
+  font-size: 80px;
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.not-found p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 650px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .beneficios {
+    grid-template-columns: 1fr;
+  }
+
+  .cita-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cita-card .boton {
+    text-align: center;
+  }
+
+  .detalle-fila {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
